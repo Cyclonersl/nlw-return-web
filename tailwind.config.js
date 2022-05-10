@@ -1,4 +1,5 @@
-module.exports = {
+module.exports = {  
+  darkMode: 'class',
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {

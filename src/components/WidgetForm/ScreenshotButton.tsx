@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Camera, Trash } from "phosphor-react";
 import html2canvas from "html2canvas";
 import { Loading } from "../Loading";
-import { backgroundSize } from "html2canvas/dist/types/css/property-descriptors/background-size";
 
 interface ScreenshotButtonProps {
   screenshot: string | null;
@@ -29,7 +28,7 @@ export function ScreenshotButton({
       <button
         type="button"
         onClick={() => onScreenshotTook(null)}
-        className="p-1 w-10 h-10 rounded-[4px] border-transparent flex justify-end items-end text-zinc-400 hover:text-zinc-100 transition-colors"
+        className="p-1 w-10 h-10 rounded-[4px] border-transparent flex justify-end items-end text-zinc-500 dark:text-zinc-400 hover:text-zinc-100 transition-colors button-focus-stroke"
         style={{
           backgroundImage: `url(${screenshot})`,
           backgroundPosition: "right bottom",
@@ -45,12 +44,12 @@ export function ScreenshotButton({
     <button
       type="button"
       onClick={handleTakeScreenshot}
-      className="p-2 bg-zinc-800 rounded-[4px] border-transparent hover:bg-zinc-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500"
+      className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-[4px] border-transparent hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors button-focus-stroke"
     >
       {isTakingScreenshot ? (
         <Loading />
       ) : (
-        <Camera className="w-6 h-6 text-zinc-100" />
+        <Camera className="w-6 h-6 text-zinc-800 dark:text-zinc-100" />
       )}
     </button>
   );

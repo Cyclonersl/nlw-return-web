@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { CloseButton } from "../CloseButton";
 
 import bugImageUrl from "../../assets/bug.svg";
 import ideaImageUrl from "../../assets/idea.svg";
@@ -44,7 +43,7 @@ export function WidgetForm() {
   }
 
   return (
-    <div className="bg-zinc-900 p-4 relative rounded-2xl mb-4 flex flex-col items-center shadow-lg w-[calc(100vw-2rem)] md:w-auto">
+    <div className="bg-white dark:bg-zinc-900 p-4 relative rounded-2xl mb-4 flex flex-col items-center shadow-lg w-[calc(100vw-2rem)] md:w-auto">
       {feedbackSent ? (
         <FeedbackSuccessStep
           onFeedbackRestartRequested={handleFeedbackRestart}
@@ -63,8 +62,8 @@ export function WidgetForm() {
         </>
       )}
 
-      <footer className="text-xs text-neutral-400">
-        Feito com ♥ pela
+      <footer className="text-xs text-neutral-500 dark:text-neutral-400">
+        Feito com ♥ pela{" "}
         <a
           className="underline underline-offset-1"
           href="https://rocketseat.com.br/"
